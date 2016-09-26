@@ -1,0 +1,5 @@
+<%# @param object %>
+
+<% if object && object.errors.any? %>
+  <p><%= object.errors.full_messages.to_sentence %></p>
+<% end %>

@@ -1,0 +1,12 @@
+<h1>Rewards</h1>
+
+<ul>
+  <% @rewards.each do |reward| %>
+    <li>
+      <%= link_to reward_path(reward['id']) do %>
+        <%= reward['title'] %>
+        <%= image_tag(reward['image'], alt: reward['title']) %>
+      <% end %>
+    </li>
+  <% end %>
+</ul>

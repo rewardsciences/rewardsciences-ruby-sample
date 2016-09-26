@@ -1,0 +1,23 @@
+<h1>Listing tweets</h1>
+
+<% if @tweets.any? %>
+  <table>
+    <thead>
+      <tr>
+        <th>Body</th>
+        <th>Author</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @tweets.each do |tweet| %>
+        <tr>
+          <td><%= tweet.body %></td>
+          <td><%= tweet.user.email %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
+
+<p><%= link_to 'New Tweet', new_tweet_path %></p>

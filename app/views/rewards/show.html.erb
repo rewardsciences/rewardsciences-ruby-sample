@@ -1,0 +1,5 @@
+<h1><%= @reward['title'] %></h1>
+
+<%= image_tag(@reward['image'], alt: @reward['title']) %>
+
+<%= button_to('Redeem', redeem_reward_path(@reward))%>

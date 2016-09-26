@@ -1,0 +1,11 @@
+<%= render partial: 'errors', locals: { object: @tweet } %>
+
+<%= form_for(@tweet) do |f| %>
+  <p>
+    <%= f.label :body %>
+    <%= f.text_field :body %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
